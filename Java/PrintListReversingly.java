@@ -53,10 +53,6 @@ public class PrintListReversingly {
     }
 //--------
 
-    public static ArrayList<Integer> printListFromTailToHead2(ListNode listNode) {
-    	
-    }
-
     public static void main(String[] args) {
     	// 1->2->3
     	ListNode node1 = new ListNode(1);
