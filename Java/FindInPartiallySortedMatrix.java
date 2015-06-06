@@ -39,8 +39,13 @@ public class FindInPartiallySortedMatrix {
 			{5, 6, 7},
 			{8, 9, 10}
 		};
+		int[][] array3 = null;
+		int[][] array4 = new int[2][2];
 		System.out.println(Find(array1, 5));
+		System.out.println(Find(array1, 1));
 		System.out.println(Find(array2, 1));
 		System.out.println(Find(array2, 12));
+		System.out.println(Find(array3, 10));
+		System.out.println(Find(array4, 10));
 	}
 }
