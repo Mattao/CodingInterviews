@@ -12,6 +12,13 @@ public class KLeastNumbers {
 			return result;
 		}
 
+		if (array.length == k) {
+			for (int i = 0; i < k; i++) {
+				result.add(array[i]);
+			}
+			return result;	
+		}
+
 		int left = 0, right = array.length - 1;
 		int index = partion(array, left, right);
 		while(index != k) {
@@ -47,8 +54,15 @@ public class KLeastNumbers {
     }
 
     public static void main(String[] args) {
-    	int[] array = {4, 5, 1, 6, 2, 7, 3, 8};
-    	ArrayList<Integer> result = GetLeastNumbers(array, 4);
+    	int[] array1 = {4, 5, 1, 6, 2, 7, 3, 8};
+    	ArrayList<Integer> result = GetLeastNumbers(array1, 4);
+    	for (Integer integer: result) {
+    		System.out.print(integer + " ");
+    	}
+    	System.out.println();
+
+    	int[] array2 = {2, 3, 1, 4};
+		result = GetLeastNumbers(array2, 4);
     	for (Integer integer: result) {
     		System.out.print(integer + " ");
     	}
