@@ -68,6 +68,8 @@ public class MoreThanHalfNumber {
         }
         int result = array[0];
         int times = 1;
+
+        // 查找出现次数最多的数字
         for(int i = 1; i < array.length; i++) {
             if(times == 0) {
                 result = array[i];
