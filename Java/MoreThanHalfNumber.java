@@ -8,7 +8,7 @@
 
 public class MoreThanHalfNumber {
 	// 用partion方法进行划分，知道找到中位数，再判断中位数是否出现次数是否超过数组长度的一半
-	public static int getMoreThanHalfNum(int[] array) {
+	public static int getMoreThanHalfNum1(int[] array) {
 		if (array == null || array.length == 0) {
 			return 0;
 		}
@@ -60,8 +60,41 @@ public class MoreThanHalfNumber {
 		array[j] = temp;
 	}
 
+// --------------------------------
+
+	public static int getMoreThanHalfNum2(int[] array) {
+		if(array == null || array.length == 0) {
+            return 0;
+        }
+        int result = array[0];
+        int times = 1;
+        for(int i = 1; i < array.length; i++) {
+            if(times == 0) {
+                result = array[i];
+                times = 1;
+            }
+            if(array[i] == result) {
+                times++;
+            } else {
+                times--;
+            }
+        }
+        
+        int count = 0;
+        for(int i = 0; i < array.length; i++) {
+            if(array[i] == result) {
+                count++;
+            }
+        }
+        if(count * 2 <= array.length) {
+            return 0;
+        }
+        return result;
+	}
+
 	public static void main(String[] args) {
 		int[] array = {1, 2, 1, 5, 1};
-		System.out.println(getMoreThanHalfNum(array));
+		System.out.println(getMoreThanHalfNum2(array));
+		System.out.println(getMoreThanHalfNum1(array));
 	}
 }
