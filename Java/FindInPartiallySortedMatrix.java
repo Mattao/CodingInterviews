@@ -6,7 +6,7 @@
  *
  */
 
-// solution1: 从左下角往右上角扫
+// solution1: 从左下角往右上角扫,或从右上角往所下角扫
 // solution2: 二维数组转一维数组，排序，再二分
 public class FindInPartiallySortedMatrix {
 
