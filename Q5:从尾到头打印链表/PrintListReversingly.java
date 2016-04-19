@@ -17,6 +17,7 @@ class ListNode {
 }
 
 public class PrintListReversingly {
+    // 法1 利用栈
 	public static ArrayList<Integer> printListFromTailToHead1(ListNode listNode) {
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		if(listNode == null) {
@@ -33,7 +34,8 @@ public class PrintListReversingly {
 		}
 		return result;
     }
-/--------
+
+    // 法2 由栈联想到递归，递归的本质是栈
     public static ArrayList<Integer> printListFromTailToHead2(ListNode listNode) {
     	ArrayList<Integer> result = new ArrayList<Integer>();
 		if(listNode == null) {
@@ -51,7 +53,6 @@ public class PrintListReversingly {
     	result.add(listNode.val);
     	return result;
     }
-//--------
 
     public static void main(String[] args) {
     	// 1->2->3

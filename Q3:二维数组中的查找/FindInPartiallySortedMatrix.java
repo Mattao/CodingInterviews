@@ -9,22 +9,24 @@
 // solution1: 从左下角往右上角扫,或从右上角往所下角扫
 // solution2: 二维数组转一维数组，排序，再二分
 public class FindInPartiallySortedMatrix {
-
+    // 从左下角往右上角扫
 	public static boolean Find(int[][] array, int target) {
-		if(array == null || array.length == 0 || array[0].length == 0) {
+		if(array == null || array.length == 0) {
 			return false;
 		}
-		int row = array.length, columns = array[0].length;
-		int i = row - 1, j = 0;
-		while(i >= 0 && j < columns) {
-			if (array[i][j] < target) {
-				j++;
-			} else if (array[i][j] > target) {
-				i--;
-			} else {
-				return true;
-			}
-		}
+		int rows = array.length, columns = array[0].length;
+        if (rows > 0 && columns > 0) {
+            int i = rows - 1, j = 0;
+            while(i >= 0 && j < columns) {
+                if (array[i][j] < target) {
+                    j++;
+                } else if (array[i][j] > target) {
+                    i--;
+                } else {
+                    return true;
+                }
+            }
+        }
 		return false;
     }
 
