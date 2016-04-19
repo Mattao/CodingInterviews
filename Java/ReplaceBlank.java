@@ -29,7 +29,7 @@ public class ReplaceBlank {
 			newArray[k] = strArray[k];
 		}
 		
-		while(i < j) {
+		while(i >= 0 && i < j) {
 			if(newArray[i] == ' ') {
 				newArray[j--] = '0';
 				newArray[j--] = '2';
