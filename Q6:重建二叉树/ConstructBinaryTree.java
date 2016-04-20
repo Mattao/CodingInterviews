@@ -14,7 +14,7 @@ class TreeNode {
 	TreeNode(int x) { val = x; }
 }
 
-public class ConstructCore {
+public class ConstructBinaryTree {
 	public static TreeNode reConstructBinaryTree(int[] pre, int[] in) {
     	if(pre == null || in == null) {
     		return null;
@@ -25,7 +25,7 @@ public class ConstructCore {
     	return reConstructBinaryTreeHelper(pre, in, 0, pre.length - 1, 0, in.length - 1);
     }
 
-    public static TreeNode reConstructBinaryTreeHelper(int[] pre, int[] in, int preStart, 
+    public static TreeNode reConstructBinaryTreeHelper(int[] pre, int[] in, int preStart,
     	int preEnd, int inStart, int inEnd) {
     	TreeNode root = new TreeNode(pre[preStart]);
     	root.left = null;
