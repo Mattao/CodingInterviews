@@ -1,17 +1,19 @@
+package com.matao;
 /**
  *	输入一个链表，反转链表后，输出反转链表后头节点
  */
 
-class ListNode {
-    int val;
-    ListNode next = null;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-}
-
 public class ReverseList {
+    private static class ListNode {
+        int val;
+        ListNode next = null;
+
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+
+
 	public static ListNode reverse(ListNode list) {
 		if (list == null) {
 			return null;

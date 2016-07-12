@@ -1,19 +1,12 @@
+package com.matao;
 /**
  *	输入一个链表，输出该链表中倒数第k个结点。
  *
  *	Author: matao
  */
 
-class ListNode {
-    int val;
-    ListNode next = null;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-}
-
 public class KthNodeFromEnd {
+
 	public static ListNode findKthFromEnd(ListNode list, int k) {
 		if(list == null || k == 0) {
 			return null;

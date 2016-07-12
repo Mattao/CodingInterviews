@@ -1,3 +1,4 @@
+package com.matao;
 /**
  *	输入一个整型数组，数组里有正数也有负数。数组中一个或连续的多个整数组成一个子数组。
  *	求所有子数组的和的最大值。要求时间复杂度O(n)
@@ -5,7 +6,7 @@
  *	Author: matao
  */
 
-public class GreatestSumOfSubarrays {
+public class GreatestSumOfSubArrays {
 	// 滑动窗口
 	public static int findGreatestSumOfSubArray1(int[] array) {
 		if (array == null || array.length == 0) {

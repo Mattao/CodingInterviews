@@ -1,19 +1,12 @@
+package com.matao;
 /**
  *	给定单项链表的头指针和一个结点指针， 定义一个函数在O(1)的时间删除该结点
  *
  *	Author: matao
  */
 
-class ListNode {
-	int val;
-	ListNode next = null;
-
-	ListNode(int val) {
-		this.val = val;
-	}
-}
-
 public class DeleteNodeList {
+
 	public static void delete(ListNode list, ListNode targetNode) {
 		if (list == null || targetNode == null) {
 			return;
