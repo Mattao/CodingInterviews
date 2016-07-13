@@ -1,4 +1,7 @@
 package com.matao;
+
+import com.matao.common.ListNode;
+
 /**
  *	给定单项链表的头指针和一个结点指针， 定义一个函数在O(1)的时间删除该结点
  *

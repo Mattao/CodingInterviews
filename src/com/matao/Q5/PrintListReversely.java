@@ -5,19 +5,12 @@ package com.matao.Q5;
  *	Author: matao
  */
 
+import com.matao.common.ListNode;
+
 import java.util.ArrayList;
 import java.util.Stack;
 
-class ListNode {
-	int val;
-	ListNode next = null;
-
-	ListNode(int val) {
-		this.val = val;
-	}
-}
-
-public class PrintListReversingly {
+public class PrintListReversely {
     // 法1 利用栈
 	public static ArrayList<Integer> printListFromTailToHead1(ListNode listNode) {
 		ArrayList<Integer> result = new ArrayList<Integer>();

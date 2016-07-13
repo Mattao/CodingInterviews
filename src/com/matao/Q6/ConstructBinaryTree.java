@@ -1,4 +1,7 @@
 package com.matao.Q6;
+
+import com.matao.common.TreeNode;
+
 /**
  *	输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。
  *	假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
@@ -7,13 +10,6 @@ package com.matao.Q6;
  *
  *	Author: matao
  */
-
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
-	TreeNode(int x) { val = x; }
-}
 
 public class ConstructBinaryTree {
 	public static TreeNode reConstructBinaryTree(int[] pre, int[] in) {
