@@ -1,4 +1,4 @@
-package com.matao;
+package com.matao.Q8;
 /**
  *	把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。
  *	输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。
@@ -27,7 +27,7 @@ public class MinNumberInRotatedArray {
 		} else if (array[start] < array[end]) {  //顺序正确，旋转过0个位置
 			return array[start];
 		} else {
-			while(start + 1 < end) {
+			while(start + 1 < end) {    // 开区间
 				int mid = start + (end - start) / 2;
 				if(array[mid] > array[start]) { //前半顺序正常
 					start = mid;
