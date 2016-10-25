@@ -1,4 +1,4 @@
-package com.matao;
+package com.matao.Q17;
 
 import com.matao.common.ListNode;
 
