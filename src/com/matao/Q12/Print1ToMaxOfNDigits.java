@@ -1,4 +1,4 @@
-package com.matao;
+package com.matao.Q12;
 /**
  *	给定一个数字N，打印从1到最大的N位数。
  *	比如输入3，则打印1, 2, 3 ... 999
