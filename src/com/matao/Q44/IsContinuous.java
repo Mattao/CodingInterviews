@@ -16,7 +16,7 @@ public class IsContinuous {
      * @param numbers
      * @return
      */
-    public boolean isContinuous(int[] numbers) {
+    public static boolean isContinuous(int[] numbers) {
         if (numbers == null || numbers.length < 1) {
             return false;
         }
@@ -44,5 +44,16 @@ public class IsContinuous {
         }
 
         return numberOfZero >= numberOfGap ? true : false;
+    }
+
+    public static void main(String[] args) {
+        int numbers1[] = { 1, 3, 2, 5, 4 };
+        int numbers2[] = { 1, 3, 2, 6, 4 };
+        int numbers3[] = { 0, 3, 2, 6, 4 };
+        int numbers4[] = { 0, 3, 1, 6, 4 };
+        System.out.println(isContinuous(numbers1));
+        System.out.println(isContinuous(numbers2));
+        System.out.println(isContinuous(numbers3));
+        System.out.println(isContinuous(numbers4));
     }
 }
