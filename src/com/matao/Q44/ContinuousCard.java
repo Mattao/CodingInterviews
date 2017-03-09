@@ -7,7 +7,7 @@ import java.util.Arrays;
  * 从扑克牌随机抽5张牌，判断是不是一个顺子，即是否连续。
  * 2 - 10 为数字本身。大小王可以看成任何数字,并且A看作1,J为11,Q为12,K为13
  */
-public class IsContinuous {
+public class ContinuousCard {
 
     /**
      * 将大小王看成是0，用0区补空缺位置。如果5个数字中空缺个数小于等于0的个数，则仍然连续
