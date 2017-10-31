@@ -47,10 +47,10 @@ public class ContinuousCard {
     }
 
     public static void main(String[] args) {
-        int numbers1[] = { 1, 3, 2, 5, 4 };
-        int numbers2[] = { 1, 3, 2, 6, 4 };
-        int numbers3[] = { 0, 3, 2, 6, 4 };
-        int numbers4[] = { 0, 3, 1, 6, 4 };
+        int numbers1[] = {1, 3, 2, 5, 4};
+        int numbers2[] = {1, 3, 2, 6, 4};
+        int numbers3[] = {0, 3, 2, 6, 4};
+        int numbers4[] = {0, 3, 1, 6, 4};
         System.out.println(isContinuous(numbers1));
         System.out.println(isContinuous(numbers2));
         System.out.println(isContinuous(numbers3));
