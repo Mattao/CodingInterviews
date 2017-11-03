@@ -10,8 +10,9 @@ package com.matao.Q3;
 // solution1: 从左下角往右上角扫,或从右上角往所下角扫
 // solution2: 二维数组转一维数组，排序，再二分
 public class FindInPartiallySortedMatrix {
+
     // 从左下角往右上角扫
-    public static boolean Find(int[][] array, int target) {
+    public boolean find(int[][] array, int target) {
         if (array == null || array.length == 0) {
             return false;
         }
@@ -29,26 +30,5 @@ public class FindInPartiallySortedMatrix {
             }
         }
         return false;
-    }
-
-    public static void main(String args[]) {
-        int[][] array1 = new int[][]{
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
-        };
-        int[][] array2 = new int[][]{
-                {2, 3, 4},
-                {5, 6, 7},
-                {8, 9, 10}
-        };
-        int[][] array3 = null;
-        int[][] array4 = new int[2][2];
-        System.out.println(Find(array1, 5));
-        System.out.println(Find(array1, 1));
-        System.out.println(Find(array2, 1));
-        System.out.println(Find(array2, 12));
-        System.out.println(Find(array3, 10));
-        System.out.println(Find(array4, 10));
     }
 }
