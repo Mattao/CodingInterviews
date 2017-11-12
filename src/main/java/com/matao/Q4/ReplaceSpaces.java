@@ -12,9 +12,9 @@ public class ReplaceSpaces {
      * 2. 新长度=原来+空格*2；
      * 3. 当等于空格时，替换；不等于是移动；
      */
-    public static String replaceBlank1(String str) {
+    public String replaceBlank(String str) {
         if (str == null || str.length() == 0) {
-            return null;
+            return str;
         }
         char[] strArray = str.toCharArray();
         int blankNum = 0;
@@ -43,22 +43,11 @@ public class ReplaceSpaces {
         return new String(newArray);
     }
 
-    // 调用API
-    public static String replaceBlank2(String str) {
+    // Using API
+    public String replaceBlankUsingApi(String str) {
         if (str == null || str.length() == 0) {
             return null;
         }
         return str.replaceAll(" ", "%20");
-    }
-
-    public static void main(String[] args) {
-        String str1 = "we are happy.";
-        System.out.println(replaceBlank1(str1));
-
-        String str2 = "  ";
-        System.out.println(replaceBlank1(str2));
-
-        String str3 = "";
-        System.out.println(replaceBlank1(str3));
     }
 }
