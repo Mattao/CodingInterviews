@@ -6,7 +6,7 @@ package com.matao.Q4;
  * <p>
  * Author: matao
  */
-public class ReplaceBlank {
+public class ReplaceSpaces {
     /**
      * 1. 统计字符串长度和空格数量；
      * 2. 新长度=原来+空格*2；
