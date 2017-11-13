@@ -3,6 +3,7 @@ package com.matao.Q5;
 import com.matao.common.ListNode;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -13,8 +14,8 @@ import java.util.Stack;
 public class PrintListInReversedOrder {
 
     // 法1 利用栈
-    public ArrayList<Integer> printListReversinglyByStack(ListNode pHead) {
-        ArrayList<Integer> result = new ArrayList<>();
+    public List<Integer> printListReversinglyByStack(ListNode pHead) {
+        List<Integer> result = new ArrayList<>();
         if (pHead == null) {
             return result;
         }
@@ -33,16 +34,21 @@ public class PrintListInReversedOrder {
     }
 
     // 法2 由栈联想到递归，递归的本质是栈
-    public ArrayList<Integer> printListReversinglyByRecursion(ListNode pHead) {
-        ArrayList<Integer> result = new ArrayList<>();
+    public List<Integer> printListReversinglyByRecursion(ListNode pHead) {
+        List<Integer> result = new ArrayList<>();
         if (pHead == null) {
             return result;
         }
-        while (pHead.next != null) {
-            printListReversinglyByRecursion(pHead.next);
+        recursionHelper(result, pHead);
+        return result;
+    }
+
+    private List<Integer> recursionHelper(List<Integer> result, ListNode node) {
+        while (node.next != null) {
+            recursionHelper(result, node.next);
+            System.out.println(node.val + "");
+            result.add(node.val);
         }
-        System.out.println(pHead.val + " ");
-        result.add(pHead.val);
         return result;
     }
 }
