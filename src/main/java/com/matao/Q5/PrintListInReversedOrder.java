@@ -44,11 +44,11 @@ public class PrintListInReversedOrder {
     }
 
     private List<Integer> recursionHelper(List<Integer> result, ListNode node) {
-        while (node.next != null) {
+        if (node.next != null) {
             recursionHelper(result, node.next);
-            System.out.println(node.val + "");
-            result.add(node.val);
         }
+        System.out.println(node.val + "");
+        result.add(node.val);
         return result;
     }
 }

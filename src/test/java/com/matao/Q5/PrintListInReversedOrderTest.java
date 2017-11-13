@@ -27,8 +27,8 @@ public class PrintListInReversedOrderTest {
         ListNode node3 = new ListNode(3);
         ListNode node4 = new ListNode(4);
         connectListNodes(node1, node2);
-//        connectListNodes(node2, node3);
-//        connectListNodes(node3, node4);
+        connectListNodes(node2, node3);
+        connectListNodes(node3, node4);
         pHead = node1;
 
         expected = new ArrayList<>(4);
