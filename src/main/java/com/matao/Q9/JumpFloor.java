@@ -9,7 +9,8 @@ package com.matao.Q9;
  * Author: matao
  */
 public class JumpFloor {
-    public static long fib(int n) {
+
+    public long jump(int n) {
         if (n <= 0) {
             return 0;
         }
@@ -21,18 +22,10 @@ public class JumpFloor {
         }
         long[] result = new long[n + 1];
         result[1] = 1;
-        result[2] = 1;
+        result[2] = 2;
         for (int i = 3; i <= n; i++) {
             result[i] = result[i - 1] + result[i - 2];
         }
         return result[n];
-    }
-
-    public static void main(String[] args) {
-        System.out.println(fib(3));
-        System.out.println(fib(10));
-        System.out.println(fib(1));
-        System.out.println(fib(2));
-        System.out.println(fib(100));
     }
 }
