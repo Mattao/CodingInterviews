@@ -1,15 +1,15 @@
 [![Build Status](https://travis-ci.org/Muxter/CodingInterviews.svg?branch=master)](https://travis-ci.org/Muxter/CodingInterviews)
 
 # CodingInterviews
-《剑指Offer》解题记录
+Solutions of book *CodingInterviews*
 
 Online Judge: 
- - 牛客网: [http://www.nowcoder.com/books/coding-interviews](http://www.nowcoder.com/books/coding-interviews)
- - 九章算法: [http://www.lintcode.com/en/ladder/6/](http://www.lintcode.com/en/ladder/6/)
+ - NowCoder: [http://www.nowcoder.com/books/coding-interviews](http://www.nowcoder.com/books/coding-interviews)
+ - NineChapter: [http://www.lintcode.com/en/ladder/6/](http://www.lintcode.com/en/ladder/6/)
 
 Reference:
  - [https://github.com/zhedahht/CodingInterviewChinese2](https://github.com/zhedahht/CodingInterviewChinese2)
  - [https://github.com/zhedahht/ChineseCodingInterviewAppendix](https://github.com/zhedahht/ChineseCodingInterviewAppendix)
  
  Test:
- - Run command *gradlew test* for unit test 
+ - Run command *./gradlew test* for unit test 
