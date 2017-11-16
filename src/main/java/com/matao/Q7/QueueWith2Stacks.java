@@ -21,6 +21,13 @@ public class QueueWith2Stacks {
                 stack2.push(stack1.pop());
             }
         }
+        if (stack2.isEmpty()) {
+            throw new EmptyQueueException();
+        }
         return stack2.pop();
+    }
+
+    public static class EmptyQueueException extends RuntimeException {
+
     }
 }
