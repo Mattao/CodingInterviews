@@ -8,3 +8,6 @@ Online Judge:
 Reference:
  - [https://github.com/zhedahht/CodingInterviewChinese2](https://github.com/zhedahht/CodingInterviewChinese2)
  - [https://github.com/zhedahht/ChineseCodingInterviewAppendix](https://github.com/zhedahht/ChineseCodingInterviewAppendix)
+ 
+ Test:
+ - Run command *gradlew test* for unit test 
