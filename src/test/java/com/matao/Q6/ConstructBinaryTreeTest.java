@@ -9,7 +9,7 @@ public class ConstructBinaryTreeTest {
     private ConstructBinaryTree constructBinaryTree;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         constructBinaryTree = new ConstructBinaryTree();
     }
 
@@ -24,7 +24,7 @@ public class ConstructBinaryTreeTest {
      *          7       8
      */
     @Test
-    public void testNormalBinaryTree() {
+    void testNormalBinaryTree() {
         int[] pre = {1, 2, 4, 7, 3, 5, 6, 8};
         int[] in = {4, 7, 2, 1, 5, 3, 8, 6};
         TreeNode root = constructBinaryTree.reConstructBinaryTree(pre, in);
