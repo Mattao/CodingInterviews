@@ -31,24 +31,24 @@ public class ConstructBinaryTree {
         if (preStart == preEnd && inStart == inEnd) {
             return root;
         }
-        int rootInorder = 0;
-        for (rootInorder = inStart; rootInorder <= inEnd; rootInorder++) {
-            if (in[rootInorder] == root.val) {
+        int rootInOrderPos;
+        for (rootInOrderPos = inStart; rootInOrderPos <= inEnd; rootInOrderPos++) {
+            if (in[rootInOrderPos] == root.val) {
                 break;
             }
         }
 
-        if (rootInorder == inEnd && in[rootInorder] != root.val) {   //in中不存在root结点，即in数组错误
+        if (rootInOrderPos == inEnd && in[rootInOrderPos] != root.val) {   //in中不存在root结点，即in数组错误
             return null;
         }
 
-        int leftLength = rootInorder - inStart;
-        int rightLength = inEnd - rootInorder;
+        int leftLength = rootInOrderPos - inStart;
+        int rightLength = inEnd - rootInOrderPos;
         if (leftLength > 0) {
-            root.left = reConstructBinaryTreeHelper(pre, in, preStart + 1, preStart + leftLength, inStart, rootInorder - 1);
+            root.left = reConstructBinaryTreeHelper(pre, in, preStart + 1, preStart + leftLength, inStart, rootInOrderPos - 1);
         }
         if (rightLength > 0) {
-            root.right = reConstructBinaryTreeHelper(pre, in, preStart + 1 + leftLength, preEnd, rootInorder + 1, inEnd);
+            root.right = reConstructBinaryTreeHelper(pre, in, preStart + 1 + leftLength, preEnd, rootInOrderPos + 1, inEnd);
         }
 
         return root;
