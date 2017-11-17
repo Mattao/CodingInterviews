@@ -2,6 +2,9 @@ package com.matao.Q6;
 
 import com.matao.common.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。
  * 假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
@@ -54,21 +57,39 @@ public class ConstructBinaryTree {
         return root;
     }
 
-    public void preTraverse(TreeNode root) {
+    public List<Integer> preTraverse(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
         if (root == null) {
-            return;
+            return list;
         }
-        System.out.print(root.val + " ");
-        preTraverse(root.left);
-        preTraverse(root.right);
+        preTraverseHelper(root, list);
+        return list;
     }
 
-    public void inTraverse(TreeNode root) {
+    private void preTraverseHelper(TreeNode root, List<Integer> result) {
         if (root == null) {
             return;
         }
-        inTraverse(root.left);
-        System.out.print(root.val + " ");
-        inTraverse(root.right);
+        result.add(root.val);
+        preTraverseHelper(root.left, result);
+        preTraverseHelper(root.right, result);
+    }
+
+    public List<Integer> inTraverse(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
+        inTraverseHelper(root, list);
+        return list;
+    }
+
+    private void inTraverseHelper(TreeNode root, List<Integer> result) {
+        if (root == null) {
+            return;
+        }
+        inTraverseHelper(root.left, result);
+        result.add(root.val);
+        inTraverseHelper(root.right, result);
     }
 }
