@@ -11,7 +11,8 @@ import com.matao.common.TreeNode;
  * Author: matao
  */
 public class ConstructBinaryTree {
-    public static TreeNode reConstructBinaryTree(int[] pre, int[] in) {
+
+    public TreeNode reConstructBinaryTree(int[] pre, int[] in) {
         if (pre == null || in == null) {
             return null;
         }
@@ -21,8 +22,8 @@ public class ConstructBinaryTree {
         return reConstructBinaryTreeHelper(pre, in, 0, pre.length - 1, 0, in.length - 1);
     }
 
-    public static TreeNode reConstructBinaryTreeHelper(int[] pre, int[] in, int preStart,
-                                                       int preEnd, int inStart, int inEnd) {
+    public TreeNode reConstructBinaryTreeHelper(int[] pre, int[] in, int preStart,
+                                                int preEnd, int inStart, int inEnd) {
         TreeNode root = new TreeNode(pre[preStart]);
         root.left = null;
         root.right = null;
@@ -53,19 +54,7 @@ public class ConstructBinaryTree {
         return root;
     }
 
-    public static void main(String[] args) {
-        int[] pre = {1, 2, 4, 7, 3, 5, 6, 8};
-        int[] in = {4, 7, 2, 1, 5, 3, 8, 6};
-        TreeNode root = reConstructBinaryTree(pre, in);
-
-        preTraverse(root);
-        System.out.println();
-
-        inTraverse(root);
-        System.out.println();
-    }
-
-    public static void preTraverse(TreeNode root) {
+    public void preTraverse(TreeNode root) {
         if (root == null) {
             return;
         }
@@ -74,7 +63,7 @@ public class ConstructBinaryTree {
         preTraverse(root.right);
     }
 
-    public static void inTraverse(TreeNode root) {
+    public void inTraverse(TreeNode root) {
         if (root == null) {
             return;
         }
