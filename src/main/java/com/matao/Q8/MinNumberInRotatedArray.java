@@ -8,8 +8,9 @@ package com.matao.Q8;
  * Author: matao
  */
 public class MinNumberInRotatedArray {
+
     // 非递减排序，即可能存在重复数字
-    public static int minNumberInRotateArray(int[] array) {
+    public int minNumberInRotateArray(int[] array) {
         if (array == null || array.length == 0) {
             return 0;
         }
@@ -41,16 +42,5 @@ public class MinNumberInRotatedArray {
                 return array[start];
             }
         }
-    }
-
-    public static void main(String[] args) {
-        int[] array1 = {3, 4, 5, 1, 2};
-        System.out.println(minNumberInRotateArray(array1));
-
-        int[] array2 = {1, 2, 5, 1, 1};
-        System.out.println(minNumberInRotateArray(array2));
-
-        int[] array3 = {1, 2, 3, 4, 5};
-        System.out.println(minNumberInRotateArray(array3));
     }
 }
