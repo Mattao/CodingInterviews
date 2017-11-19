@@ -1,5 +1,6 @@
 package com.matao.Q7;
 
+import com.matao.common.EmptyQueueException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,6 +27,6 @@ public class QueueWith2StacksTest {
 
     @Test
     public void testEmptyQueue() {
-        Assertions.assertThrows(QueueWith2Stacks.EmptyQueueException.class, () -> queueWith2Stacks.dequeue());
+        Assertions.assertThrows(EmptyQueueException.class, () -> queueWith2Stacks.dequeue());
     }
 }

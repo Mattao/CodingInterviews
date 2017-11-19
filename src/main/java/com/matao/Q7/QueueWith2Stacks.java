@@ -1,5 +1,7 @@
 package com.matao.Q7;
 
+import com.matao.common.EmptyQueueException;
+
 import java.util.Stack;
 
 /**
@@ -25,9 +27,5 @@ public class QueueWith2Stacks {
             throw new EmptyQueueException();
         }
         return stack2.pop();
-    }
-
-    public static class EmptyQueueException extends RuntimeException {
-
     }
 }
