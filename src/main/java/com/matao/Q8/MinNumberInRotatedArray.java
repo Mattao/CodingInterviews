@@ -1,5 +1,7 @@
 package com.matao.Q8;
 
+import java.security.InvalidParameterException;
+
 /**
  * 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。
  * 输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。
@@ -12,7 +14,7 @@ public class MinNumberInRotatedArray {
     // 非递减排序，即可能存在重复数字
     public int min(int[] array) {
         if (array == null || array.length == 0) {
-            return 0;
+            throw new InvalidParameterException("param array cannot be null or empty");
         }
         int start = 0, end = array.length - 1;
 
