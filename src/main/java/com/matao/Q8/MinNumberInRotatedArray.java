@@ -10,7 +10,7 @@ package com.matao.Q8;
 public class MinNumberInRotatedArray {
 
     // 非递减排序，即可能存在重复数字
-    public int minNumberInRotateArray(int[] array) {
+    public int min(int[] array) {
         if (array == null || array.length == 0) {
             return 0;
         }
