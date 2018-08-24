@@ -1,11 +1,10 @@
-package com.matao.Q4;
+package com.matao;
 
-import com.matao.Q05_ReplaceSpaces;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ReplaceSpacesTest {
+public class Q05_ReplaceSpacesTest {
 
     private Q05_ReplaceSpaces replaceSpaces;
 
