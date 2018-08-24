@@ -32,14 +32,4 @@ public class Q01_AssignmentOperator {
             return String.format("MyString{ data = '%s'}", data);
         }
     }
-
-    public static void main(String[] args) {
-        MyString s1 = new MyString("a");
-        MyString s2 = new MyString("b");
-        MyString s3 = new MyString("c");
-        System.out.println(s1.assign(s2).assign(s3));
-        System.out.println("s1:" + s1);
-        System.out.println("s2:" + s2);
-        System.out.println("s3:" + s3);
-    }
 }
