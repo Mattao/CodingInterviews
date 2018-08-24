@@ -1,4 +1,4 @@
-package com.matao.Q4;
+package com.matao;
 
 /**
  * 请实现一个函数，将一个字符串中的空格替换成“%20”。
@@ -6,7 +6,7 @@ package com.matao.Q4;
  * <p>
  * Author: matao
  */
-public class ReplaceSpaces {
+public class Q05_ReplaceSpaces {
     /**
      * 1. 统计字符串长度和空格数量；
      * 2. 新长度=原来+空格*2；
@@ -41,13 +41,5 @@ public class ReplaceSpaces {
             i--;
         }
         return new String(newArray);
-    }
-
-    // Using API
-    public String replaceBlankUsingApi(String str) {
-        if (str == null || str.length() == 0) {
-            return null;
-        }
-        return str.replaceAll(" ", "%20");
     }
 }
