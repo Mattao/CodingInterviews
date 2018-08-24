@@ -18,7 +18,7 @@ public class Q03_DuplicationInArray {
      * 时间复杂度 O(n^2)
      * 空间复杂度 O(1)
      */
-    public static int findDuplication1(int[] data) {
+    public int findDuplication1(int[] data) {
         if (data == null || data.length < 2) {
             return -1;
         }
@@ -37,7 +37,7 @@ public class Q03_DuplicationInArray {
      * 时间复杂度 O(nlogn)
      * 空间复杂度 O(1)
      */
-    public static int findDuplication2(int[] data) {
+    public int findDuplication2(int[] data) {
         if (data == null || data.length < 2) {
             return -1;
         }
@@ -60,7 +60,7 @@ public class Q03_DuplicationInArray {
      * 时间复杂度 O(n)
      * 空间复杂度 O(n)
      */
-    public static int findDuplication3(int[] data) {
+    public int findDuplication3(int[] data) {
         if (data == null || data.length < 2) {
             return -1;
         }
@@ -80,7 +80,7 @@ public class Q03_DuplicationInArray {
      * 时间复杂度 O(n)
      * 空间复杂度 O(1)
      */
-    public static int findDuplication4(int[] data) {
+    public int findDuplication4(int[] data) {
         if (data == null || data.length < 2) {
             return -1;
         }
@@ -102,7 +102,7 @@ public class Q03_DuplicationInArray {
      * 时间复杂度 O(nlogn)
      * 空间复杂度 O(1)
      */
-    public static int findDuplication5(int[] data) {
+    public int findDuplication5(int[] data) {
         if (data == null || data.length < 2) {
             return -1;
         }
@@ -126,29 +126,12 @@ public class Q03_DuplicationInArray {
         return -1;
     }
 
-    private static int countRange(int[] data, int start, int end) {
+    private int countRange(int[] data, int start, int end) {
         int count = 0;
         for (int i = 0; i < data.length; i++) {
             if (start <= data[i] && end >= data[i])
                 count++;
         }
         return count;
-    }
-
-    public static void main(String[] args) {
-        int[] data1 = {2, 3, 1, 0, 2, 5, 3};
-        System.out.println(findDuplication1(data1));
-        System.out.println(findDuplication2(data1));
-        System.out.println(findDuplication3(data1));
-        System.out.println(findDuplication4(data1));
-        System.out.println(findDuplication5(data1));
-
-        int[] data2 = {2, 3, 1, 0, 4, 5, 5};
-        System.out.println(findDuplication1(data2));
-        System.out.println(findDuplication2(data2));
-        System.out.println(findDuplication3(data2));
-        System.out.println(findDuplication4(data2));
-        System.out.println(findDuplication5(data2));
-
     }
 }
