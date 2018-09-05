@@ -23,6 +23,12 @@ public class Q03_DuplicationInArray {
             return -1;
         }
         for (int i = 0; i < data.length; i++) {
+            if (data[i] < 0 || data[i] > data.length -1) {
+                return -1;
+            }
+        }
+
+        for (int i = 0; i < data.length; i++) {
             for (int j = i + 1; j < data.length; j++) {
                 if (data[i] == data[j]) {
                     return data[i];
@@ -41,6 +47,12 @@ public class Q03_DuplicationInArray {
         if (data == null || data.length < 2) {
             return -1;
         }
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] < 0 || data[i] > data.length -1) {
+                return -1;
+            }
+        }
+
         Arrays.sort(data);
         int prev = data[0];
         for (int i = 1; i < data.length; i++) {
@@ -64,6 +76,12 @@ public class Q03_DuplicationInArray {
         if (data == null || data.length < 2) {
             return -1;
         }
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] < 0 || data[i] > data.length -1) {
+                return -1;
+            }
+        }
+
         int[] hashTable = new int[data.length];
         for (int item : data) {
             if (hashTable[item] == 1) {
@@ -86,6 +104,12 @@ public class Q03_DuplicationInArray {
         if (data == null || data.length < 2) {
             return -1;
         }
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] < 0 || data[i] > data.length -1) {
+                return -1;
+            }
+        }
+
         for (int i = 0; i < data.length; i++) {
             while (data[i] != i) {
                 /**
@@ -112,6 +136,12 @@ public class Q03_DuplicationInArray {
         if (data == null || data.length < 2) {
             return -1;
         }
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] < 0 || data[i] > data.length -1) {
+                return -1;
+            }
+        }
+
         int start = 0, end = data.length - 1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
