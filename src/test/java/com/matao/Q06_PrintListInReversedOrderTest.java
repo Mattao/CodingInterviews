@@ -1,4 +1,4 @@
-package com.matao.Q5;
+package com.matao;
 
 import com.matao.common.ListNode;
 import org.junit.jupiter.api.Assertions;
@@ -10,17 +10,17 @@ import java.util.Collections;
 import java.util.List;
 
 @SuppressWarnings("all")
-public class PrintListInReversedOrderTest {
+public class Q06_PrintListInReversedOrderTest {
 
-    private PrintListInReversedOrder printListInReversedOrder;
-    private ListNode pHead;
+    private Q06_PrintListInReversedOrder printListInReversedOrder;
+    private ListNode head;
     private ListNode single;
     private List<Integer> expected;
     private List<Integer> singleExpected;
 
     @BeforeEach
     public void setUp() {
-        printListInReversedOrder = new PrintListInReversedOrder();
+        printListInReversedOrder = new Q06_PrintListInReversedOrder();
 
         ListNode node1 = new ListNode(1);
         ListNode node2 = new ListNode(2);
@@ -29,7 +29,7 @@ public class PrintListInReversedOrderTest {
         connectListNodes(node1, node2);
         connectListNodes(node2, node3);
         connectListNodes(node3, node4);
-        pHead = node1;
+        head = node1;
 
         expected = new ArrayList<>(4);
         expected.add(4);
@@ -48,7 +48,7 @@ public class PrintListInReversedOrderTest {
 
     @Test
     public void testNormalListByStack() {
-        List<Integer> result = printListInReversedOrder.printListReversinglyByStack(pHead);
+        List<Integer> result = printListInReversedOrder.printListReversinglyByStack(head);
         Assertions.assertEquals(expected, result);
     }
 
@@ -67,7 +67,7 @@ public class PrintListInReversedOrderTest {
 
     @Test
     public void testNormalListByRecursion() {
-        List<Integer> result = printListInReversedOrder.printListReversinglyByRecursion(pHead);
+        List<Integer> result = printListInReversedOrder.printListReversinglyByRecursion(head);
         Assertions.assertEquals(expected, result);
     }
 
