@@ -9,7 +9,7 @@ package com.matao;
 public class Q04_FindInPartiallySortedMatrix {
 
     // 从左下角往右上角扫,或从右上角往所下角扫
-    public static boolean findInPartiallySortedMatrix(int[][] data, int target) {
+    public boolean findInPartiallySortedMatrix(int[][] data, int target) {
         if (data == null || data.length == 0 || data[0].length == 0) {
             return false;
         }
@@ -26,16 +26,5 @@ public class Q04_FindInPartiallySortedMatrix {
             }
         }
         return false;
-    }
-
-    public static void main(String[] args) {
-        int[][] data = {
-            {1, 2, 8, 9},
-            {2, 4, 9, 12},
-            {4, 7, 10, 13},
-            {6, 8, 11, 15}
-        };
-        System.out.println(findInPartiallySortedMatrix(data, 10));
-        System.out.println(findInPartiallySortedMatrix(data, 5));
     }
 }
