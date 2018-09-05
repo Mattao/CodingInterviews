@@ -75,8 +75,10 @@ public class Q03_DuplicationInArray {
     }
 
     /**
-     * 因为数组长度 n, 且数字都是在 0 - n-1 范围内。
-     * 根据数字特点排序，会修改原始数据，
+     * 因为数组长度 n, 且数字都是在 0 - n-1 范围内,
+     * 根据数字特点，那么重排序后，若没有重复的数字，数字 i 将出现在下标为 i 的位置。即 i == data[i]
+     * 由于数组中有重复的数字，有些位置可能存在多个数字，同时有些位置可能没有数字。
+     * 当 data[i] !== i 时候，则将 data[i] 交换到它应该出现的位置，即 data[data[i]]
      * 时间复杂度 O(n)
      * 空间复杂度 O(1)
      */
@@ -85,13 +87,17 @@ public class Q03_DuplicationInArray {
             return -1;
         }
         for (int i = 0; i < data.length; i++) {
-            while (data[i] != i) { // i 位置上的数data[i]与下标 i 不相等，则判断 data[i] 与 data[data[i]] 是否相等
-                if (data[i] == data[data[i]]) {
-                    return data[i];
-                }
+            while (data[i] != i) {
+                /**
+                 *  pos     i   ... temp
+                 *  value  temp     data[temp]
+                 */
                 int temp = data[i];
-                data[i] = data[data[i]];
-                data[data[i]] = temp;
+                if (temp == data[temp]) {
+                    return temp;
+                }
+                data[i] = data[temp];
+                data[temp] = temp;
             }
         }
         return -1;
