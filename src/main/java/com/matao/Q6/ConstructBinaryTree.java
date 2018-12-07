@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class ConstructBinaryTree {
 
-    public TreeNode reConstructBinaryTree(int[] pre, int[] in) {
+    public TreeNode<Integer> reConstructBinaryTree(int[] pre, int[] in) {
         if (pre == null || in == null) {
             return null;
         }
@@ -25,9 +25,9 @@ public class ConstructBinaryTree {
         return reConstructBinaryTreeHelper(pre, in, 0, pre.length - 1, 0, in.length - 1);
     }
 
-    public TreeNode reConstructBinaryTreeHelper(int[] pre, int[] in, int preStart,
-                                                int preEnd, int inStart, int inEnd) {
-        TreeNode root = new TreeNode(pre[preStart]);
+    public TreeNode<Integer> reConstructBinaryTreeHelper(int[] pre, int[] in, int preStart,
+                                                         int preEnd, int inStart, int inEnd) {
+        TreeNode<Integer> root = new TreeNode<>(pre[preStart]);
         root.left = null;
         root.right = null;
 
@@ -57,7 +57,7 @@ public class ConstructBinaryTree {
         return root;
     }
 
-    public List<Integer> preTraverse(TreeNode root) {
+    public List<Integer> preTraverse(TreeNode<Integer> root) {
         List<Integer> list = new ArrayList<>();
         if (root == null) {
             return list;
@@ -66,7 +66,7 @@ public class ConstructBinaryTree {
         return list;
     }
 
-    private void preTraverseHelper(TreeNode root, List<Integer> result) {
+    private void preTraverseHelper(TreeNode<Integer> root, List<Integer> result) {
         if (root == null) {
             return;
         }
@@ -75,7 +75,7 @@ public class ConstructBinaryTree {
         preTraverseHelper(root.right, result);
     }
 
-    public List<Integer> inTraverse(TreeNode root) {
+    public List<Integer> inTraverse(TreeNode<Integer> root) {
         List<Integer> list = new ArrayList<>();
         if (root == null) {
             return list;
@@ -84,7 +84,7 @@ public class ConstructBinaryTree {
         return list;
     }
 
-    private void inTraverseHelper(TreeNode root, List<Integer> result) {
+    private void inTraverseHelper(TreeNode<Integer> root, List<Integer> result) {
         if (root == null) {
             return;
         }
