@@ -11,6 +11,7 @@ import java.util.Arrays;
  * input: { 2， 3， 1， 0， 2， 5， 3 }
  * output: 2 或 3
  */
+@SuppressWarnings("Duplicates")
 public class Q03_DuplicationInArray {
 
     /**
