@@ -1,40 +1,33 @@
 package com.matao;
 
 import com.matao.common.InvalidParameterException;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by matao on 2018-12-07.
- * <p>
- * 求斐波那契数列的第 n 项的值。
- * f(0) = 0
- * f(1) = 1
- * f(n) = f(n-1) + f(n-2), n > 1
  */
-public class Q10_Fibonacci {
+public class Q10_FibonacciTest {
 
-    public int fibRecursion(int n) {
-        if (n < 0) {
-            throw new InvalidParameterException("n must be greater than zero");
-        }
+    private Q10_Fibonacci fibonacci;
 
-        if (n == 0 || n == 1) return n;
-        return fibRecursion(n - 1) + fibRecursion(n - 2);
+    @BeforeEach
+    void setUp() {
+        fibonacci = new Q10_Fibonacci();
     }
 
-    public int fibIteration(int n) {
-        if (n < 0) {
-            throw new InvalidParameterException("n must be greater than zero");
-        }
+    @Test
+    void testFibRecursion() {
+        Assertions.assertEquals(1, fibonacci.fibRecursion(1));
+        Assertions.assertEquals(233, fibonacci.fibRecursion(13));
+        Assertions.assertThrows(InvalidParameterException.class, () -> fibonacci.fibRecursion(-1));
+    }
 
-        if (n == 0 || n == 1) return n;
-
-        int a = 0, b = 1;
-        int i = 3;
-        while (i <= n) {
-            int temp = a + b;
-            a = b;
-            b = temp;
-        }
-        return b;
+    @Test
+    void testFibIteration() {
+        Assertions.assertEquals(1, fibonacci.fibIteration(1));
+        Assertions.assertEquals(233, fibonacci.fibIteration(13));
+        Assertions.assertThrows(InvalidParameterException.class, () -> fibonacci.fibIteration(-1));
     }
 }
