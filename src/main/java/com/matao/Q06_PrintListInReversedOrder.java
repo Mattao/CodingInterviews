@@ -14,13 +14,13 @@ import java.util.Stack;
 public class Q06_PrintListInReversedOrder {
 
     // 利用栈
-    public List<Integer> printListReversinglyByStack(ListNode head) {
+    public List<Integer> printListReversinglyByStack(ListNode<Integer> head) {
         List<Integer> result = new ArrayList<>();
         if (head == null) {
             return result;
         }
         Stack<Integer> stack = new Stack<>();
-        ListNode node = head;
+        ListNode<Integer> node = head;
         while (node != null) {
             stack.push(node.val);
             node = node.next;
@@ -34,7 +34,7 @@ public class Q06_PrintListInReversedOrder {
     }
 
     // 由栈联想到递归，递归的本质是栈
-    public List<Integer> printListReversinglyByRecursion(ListNode head) {
+    public List<Integer> printListReversinglyByRecursion(ListNode<Integer> head) {
         List<Integer> result = new ArrayList<>();
         if (head == null) {
             return result;
@@ -44,7 +44,7 @@ public class Q06_PrintListInReversedOrder {
         return result;
     }
 
-    private void recursionHelper(List<Integer> result, ListNode node) {
+    private void recursionHelper(List<Integer> result, ListNode<Integer> node) {
         if (node == null) {
             return;
         }

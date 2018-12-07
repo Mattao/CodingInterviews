@@ -9,11 +9,11 @@ import com.matao.common.ListNode;
  */
 public class KthNodeFromEnd {
 
-    public static ListNode findKthFromEnd(ListNode list, int k) {
+    public static ListNode findKthFromEnd(ListNode<Integer> list, int k) {
         if (list == null || k == 0) {
             return null;
         }
-        ListNode p = list, q = list;
+        ListNode<Integer> p = list, q = list;
         while (k > 1) {
             q = q.next;
             if (q == null) {    // k大于结点总数
@@ -30,9 +30,9 @@ public class KthNodeFromEnd {
     }
 
     public static void main(String[] args) {
-        ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
+        ListNode<Integer> node1 = new ListNode<>(1);
+        ListNode<Integer> node2 = new ListNode<>(2);
+        ListNode<Integer> node3 = new ListNode<>(3);
         node1.next = node2;
         node2.next = node3;
 

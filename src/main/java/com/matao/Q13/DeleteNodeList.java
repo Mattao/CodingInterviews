@@ -9,18 +9,18 @@ import com.matao.common.ListNode;
  */
 public class DeleteNodeList {
 
-    public static void delete(ListNode list, ListNode targetNode) {
+    public static void delete(ListNode<Integer> list, ListNode<Integer> targetNode) {
         if (list == null || targetNode == null) {
             return;
         }
 
         if (targetNode.next != null) { //待删结点不是最后一个结点
-            ListNode p = targetNode.next;
+            ListNode<Integer> p = targetNode.next;
             targetNode.val = p.val;
             targetNode.next = p.next;
             p = null;
         } else if (list != targetNode) {  //待删结点是尾结点，但不是头结点
-            ListNode p = list;
+            ListNode<Integer> p = list;
             while (p.next != targetNode) {
                 p = p.next;
             }
@@ -31,11 +31,11 @@ public class DeleteNodeList {
         }
     }
 
-    public static void print(ListNode list) {
+    public static void print(ListNode<Integer> list) {
         if (list == null) {
             return;
         }
-        ListNode p = list;
+        ListNode<Integer> p = list;
         while (p != null) {
             System.out.print(p.val + " ");
             p = p.next;
@@ -44,9 +44,9 @@ public class DeleteNodeList {
     }
 
     public static void main(String[] args) {
-        ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
+        ListNode<Integer> node1 = new ListNode<>(1);
+        ListNode<Integer> node2 = new ListNode<>(2);
+        ListNode<Integer> node3 = new ListNode<>(3);
         node1.next = node2;
         node2.next = node3;
 

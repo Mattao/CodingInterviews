@@ -13,8 +13,8 @@ import java.util.List;
 public class Q06_PrintListInReversedOrderTest {
 
     private Q06_PrintListInReversedOrder printListInReversedOrder;
-    private ListNode head;
-    private ListNode single;
+    private ListNode<Integer> head;
+    private ListNode<Integer> single;
     private List<Integer> expected;
     private List<Integer> singleExpected;
 
@@ -22,10 +22,10 @@ public class Q06_PrintListInReversedOrderTest {
     public void setUp() {
         printListInReversedOrder = new Q06_PrintListInReversedOrder();
 
-        ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
-        ListNode node4 = new ListNode(4);
+        ListNode<Integer> node1 = new ListNode<>(1);
+        ListNode<Integer> node2 = new ListNode<>(2);
+        ListNode<Integer> node3 = new ListNode<>(3);
+        ListNode<Integer> node4 = new ListNode<>(4);
         connectListNodes(node1, node2);
         connectListNodes(node2, node3);
         connectListNodes(node3, node4);
@@ -37,7 +37,7 @@ public class Q06_PrintListInReversedOrderTest {
         expected.add(2);
         expected.add(1);
 
-        single = new ListNode(100);
+        single = new ListNode<>(100);
         singleExpected = new ArrayList<>();
         singleExpected.add(100);
     }
