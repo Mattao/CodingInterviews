@@ -1,19 +1,18 @@
-package com.matao.Q8;
+package com.matao;
 
+import com.matao.common.InvalidParameterException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.security.InvalidParameterException;
+public class Q11_MinNumberInRotatedArrayTest {
 
-public class MinNumberInRotatedArrayTest {
-
-    private MinNumberInRotatedArray minNumberInRotatedArray;
+    private Q11_MinNumberInRotatedArray minNumberInRotatedArray;
 
     @BeforeEach
     void setUp() {
-        minNumberInRotatedArray = new MinNumberInRotatedArray();
+        minNumberInRotatedArray = new Q11_MinNumberInRotatedArray();
     }
 
     @Test
@@ -61,7 +60,6 @@ public class MinNumberInRotatedArrayTest {
     @Test
     @DisplayName("test null array")
     void testNullArray() {
-        int[] array = null;
-        Assertions.assertThrows(InvalidParameterException.class, () -> minNumberInRotatedArray.min(array));
+        Assertions.assertThrows(InvalidParameterException.class, () -> minNumberInRotatedArray.min(null));
     }
 }
