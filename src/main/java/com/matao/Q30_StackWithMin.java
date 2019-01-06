@@ -16,8 +16,9 @@ public class Q30_StackWithMin<E extends Comparable> {
     private LinkedList<E> minStack = new LinkedList<>();
 
     public void push(E item) {
-        if (dataStack.isEmpty()) {
-            dataStack.push(item);
+        dataStack.push(item);
+        if (minStack.isEmpty()) {
+            minStack.push(item);
         } else {
             E tmp = dataStack.peek();
             if (tmp.compareTo(item) < 0) {
