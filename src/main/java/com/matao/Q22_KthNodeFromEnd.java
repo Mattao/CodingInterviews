@@ -18,8 +18,8 @@ public class Q22_KthNodeFromEnd {
         }
 
         ListNode<Integer> slow = head, fast = head;
-        for (int i = 0; i < k; i++) {
-            if (fast.next != null || i == k - 1) {
+        for (int i = 0; i < k - 1; i++) {
+            if (fast.next != null) {
                 fast = fast.next;
             } else {
                 return null;
