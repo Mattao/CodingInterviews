@@ -35,18 +35,9 @@ public class Q25_MergeSortedLists {
 
         ListNode<Integer> p = head1;
         ListNode<Integer> q = head2;
-        ListNode<Integer> r;
-        ListNode<Integer> mergedHead;
-        if (p.val < q.val) {
-            mergedHead = p;
-            r = p;
-            p = p.next;
-        } else {
-            mergedHead = q;
-            r = q;
-            q = q.next;
-        }
 
+        ListNode<Integer> dummy = new ListNode<>(0);
+        ListNode<Integer> r = dummy;
         while (p != null && q != null) {
             if (p.val < q.val) {
                 r.next = p;
@@ -57,13 +48,12 @@ public class Q25_MergeSortedLists {
             }
             r = r.next;
         }
-
         if (p != null) {
             r.next = p;
-        } else {
+        }
+        if (q != null) {
             r.next = q;
         }
-
-        return mergedHead;
+        return dummy.next;
     }
 }
