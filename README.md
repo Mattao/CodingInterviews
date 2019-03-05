@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Muxter/CodingInterviews.svg?branch=master)](https://travis-ci.org/Muxter/CodingInterviews)
+[![Build Status](https://travis-ci.org/Mattao/CodingInterviews.svg?branch=master)](https://travis-ci.org/Mattao/CodingInterviews)
 
 # CodingInterviews
 Solutions of book *CodingInterviews*
